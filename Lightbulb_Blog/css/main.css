@@ -1,0 +1,164 @@
+.container-fluid{
+    height: 100vh;
+    width: 100vw;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+/* Landing page animations and elements */
+#landing-bulb-container{
+    display: block;
+    position: relative;
+    background: linear-gradient(to right, rgb(0, 0, 0), #000000);  
+    z-index: 88; 
+    top: -580px;
+    width: 100vw;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+#light-bulb-fade-background{
+    position: absolute;
+    width: 100%;
+    width: 100vw;
+    z-index: 88; 
+    top: -40px;
+    overflow: hidden;
+    background: black;
+    animation-name: light-bulb-fade-background;
+    animation-duration: 10s;
+    -webkit-animation-name: light-bulb-fade-background;
+    -webkit-animation-duration: 10s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    
+}
+
+/* all animations will be defined adjacent to their respective elements */
+@-webkit-keyframes light-bulb-fade-background{
+    0% {background-color: black; opacity: 1}
+    25% {background-color: rgb(161, 159, 159); opacity: .75}
+    50% {background-color: rgb(29, 28, 28); opacity: 1}
+    100% {background-color: white; opacity: 0}
+}
+
+@keyframes light-bulb-fade-background{
+    0% {background-color: black; opacity: 1}
+    25% {background-color: rgb(161, 159, 159); opacity: .75}
+    50% {background-color: rgb(29, 28, 28); opacity: 1}
+    100% {background-color: white; opacity: 0}
+}
+
+
+#bulb{
+    display: inline-block;
+    z-index: 200;
+}
+
+#bulb i{
+    font-size: 23em;
+    position: absolute;
+    left: 42vw;
+    top: -1vh;
+    color: black;
+
+}
+
+/* the on/off switch and relating animation */
+
+.switch{
+    display: inline;
+    position: absolute;
+    top: 30vh;
+    right: 20vw;
+    visibility: visible;
+    opacity: 1;
+    transition: cubic-bezier(0.77, 0, 0.175, 1)
+}
+
+.switch label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+#switch-fade-animation{
+    animation-name: switch-fade-animation;
+    animation-duration: 10s;
+    -webkit-animation-name: switch-fade-animation;
+    -webkit-animation-duration: 10s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes switch-fade-animation {
+    0%  {opacity: 1}
+    25% {opacity: .45}
+    50% {opacity: .75}
+    100% {opacity: 0}
+}
+
+@keyframes switch-fade-animation {
+    0%  {opacity: 1}
+    25% {opacity: .35}
+    50% {opacity: .75}
+    100% {opacity: 0}
+}
+
+/* Beginning of actual site css */
+
+nav{
+    background-color: rgb(235, 152, 59);
+    margin-bottom: 2vmin;
+
+}
+
+/* parallax stuff */
+
+.parallax-container{
+    height: 500px;
+}
+
+#landing-page-text{
+    top: 15vh;
+}
+
+/* underlays */
+
+.underlay-shape1{
+    display: block;
+    position: absolute;
+    background: rgba(231, 245, 31, 0.918);  
+    z-index: -2;
+    width: 14vw;
+    height: 45vh;
+    transform: skew(120deg, 30deg);
+}
+
+.underlay-shape2{
+    display: block;
+    position: absolute;
+    background: rgba(3, 86, 163, 0.733);  
+    z-index: -2;
+    left: 150vmin;
+    width: 14vw;
+    height: 45vh;
+    transform: skew(-120deg, -30deg);
+}
+
+/* footer */
+
+.page-footer{
+    background-color: rgb(33, 34, 31);
+}
