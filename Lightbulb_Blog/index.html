@@ -18,12 +18,20 @@
     <nav>
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">    
             <li><a href="sass.html">Sass</a></li>
             <li><a href="badges.html">Components</a></li>
             <li><a href="collapsible.html">JavaScript</a></li>
           </ul>
         </div>
+
+        <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+        </ul>
     </nav>
 
     <div class="parallax-container center-align">
@@ -58,9 +66,9 @@
 
     <div class = "container">
         <div class = "row">
-            <div class="underlay-shape1"></div>
+            <div class = "col m6 s12">
+                <div class="underlay-shape1"></div>
 
-            <div class = "col m2 s12">
                 <div class = "block">
                     <h5 class = "center">New distillation of Information</h5>
                     <p class = "light">
@@ -69,7 +77,7 @@
                 </div>
 
             </div>
-            <div class="col m2 s12">
+            <div class="col m6 s12">
                 <h5 class = "center"> You decide your truth</h5>
 
             </div>
@@ -86,7 +94,7 @@
     <div class = "container">
             <div class = "row">
 
-                <div class = "col m2 s12">
+                <div class = "col m6 s12">
                     <div class = "block">
                         <h5 class = "center"> Build your opinons yourself </h5>
                         <p class = "light">
@@ -95,11 +103,11 @@
                     </div>
     
                 </div>
-                <div class="col m2 s12">
+                <div class="col m6 s12">
                     <h5 class = "center"> You decide your truth</h5>
-    
+                    <div class="underlay-shape2"></div>
+
                 </div>
-                <div class="underlay-shape2"></div>
             </div>
             
     </div>
@@ -148,7 +156,7 @@
                     });
                     $("#landing-bulb-container").attr("id", "light-bulb-fade-background");
                     $("body,html").css({
-                        "overflow": "scroll"
+                        "overflow-y": "scroll"
                     })
                     $(".switch").attr("id", "switch-fade-animation");
                     setTimeout(function(){
@@ -164,7 +172,8 @@
 
             });
             $('.parallax').parallax();
-            var instance = M.Parallax.getInstance(elem);
+            var instance = M.Parallax.getInstance(".parallax", 900);
+            $('.sidenav').sidenav();
 
         })
     </script>
