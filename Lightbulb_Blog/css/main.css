@@ -4,7 +4,7 @@
 }
 
 html,body{
-    overflow-x: hidden;
+    overflow: none;
 }
 
 /* Landing page animations and elements */
@@ -24,8 +24,9 @@ html,body{
     position: absolute;
     width: 100%;
     width: 100vw;
+    height: 130vh;
     z-index: 88; 
-    top: -40px;
+    top: -35px;
     overflow: hidden;
     background: black;
     animation-name: light-bulb-fade-background;
@@ -151,7 +152,7 @@ nav{
     position: absolute;
     background: rgba(3, 86, 163, 0.733);  
     z-index: -2;
-    left: 150vmin;
+    left: 50vmin;
     width: 14vw;
     height: 45vh;
     transform: skew(-120deg, -30deg);
@@ -161,4 +162,30 @@ nav{
 
 .page-footer{
     background-color: rgb(33, 34, 31);
+}
+
+@media (max-width: 780px) {
+
+    .underlay-shape2{
+        width: 23vw;
+    }
+
+    .underlay-shape1{
+        width: 23vw;
+    }
+
+    #landing-page-text{
+        right: 45vw;
+    }
+
+    #landing-bulb-container{
+        display: none;
+    }
+    
+    body{
+        overflow-y: scroll;
+    }
+
+   
+
 }
