@@ -4,7 +4,8 @@
 }
 
 html,body{
-    overflow: none;
+    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Landing page animations and elements */
@@ -131,9 +132,7 @@ nav{
     height: 500px;
 }
 
-#landing-page-text{
-    top: 15vh;
-}
+
 
 /* underlays */
 
@@ -152,7 +151,7 @@ nav{
     position: absolute;
     background: rgba(3, 86, 163, 0.733);  
     z-index: -2;
-    left: 50vmin;
+    left: 70vw;
     width: 14vw;
     height: 45vh;
     transform: skew(-120deg, -30deg);
@@ -175,7 +174,7 @@ nav{
     }
 
     #landing-page-text{
-        right: 45vw;
+        right: 65vw;
     }
 
     #landing-bulb-container{
