@@ -123,6 +123,7 @@ html,body{
 nav{
     background-color: rgb(235, 152, 59);
     margin-bottom: 2vmin;
+    overflow: hidden;
 
 }
 
@@ -130,6 +131,8 @@ nav{
 
 .parallax-container{
     height: 500px;
+    overflow: hidden;
+
 }
 
 
@@ -138,39 +141,50 @@ nav{
 
 .underlay-shape1{
     display: block;
-    position: absolute;
-    background: rgba(231, 245, 31, 0.918);  
+    position: fixed;
+    background: rgba(59, 235, 152, 0.918);  
     z-index: -2;
+    bottom: 3vh;
     width: 14vw;
     height: 45vh;
     transform: skew(120deg, 30deg);
+    overflow: hidden;
+
 }
 
 .underlay-shape2{
     display: block;
-    position: absolute;
-    background: rgba(3, 86, 163, 0.733);  
+    position: fixed;
+    background: rgba(152, 59, 235, 0.733);  
     z-index: -2;
     left: 70vw;
+    bottom: 10vw;
     width: 14vw;
     height: 45vh;
     transform: skew(-120deg, -30deg);
+    overflow: hidden;
+
 }
 
 /* footer */
 
 .page-footer{
-    background-color: rgb(33, 34, 31);
+    background-color: rgb(235, 152, 59);
+    width: 100vw;
 }
 
 @media (max-width: 780px) {
 
     .underlay-shape2{
         width: 23vw;
+        overflow: hidden;
+        height: 30vh;
     }
 
     .underlay-shape1{
         width: 23vw;
+        overflow: hidden;
+
     }
 
     #landing-page-text{
